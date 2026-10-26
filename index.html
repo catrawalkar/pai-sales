@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation for [Client Name]</title>
+    <!-- Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0A192F;
+            --bg-light: #F8FAFC;
+            --text-dark: #0A192F;
+            --text-light: #F8FAFC;
+            --accent-gold: #C5A880; 
+            --accent-blue: #1E3A8A;
+            --border-light: rgba(10, 25, 47, 0.1);
+            --border-dark: rgba(248, 250, 252, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Prevent double scrollbar tracks and anchor structural snapping */
+        html {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            height: 100%;
+            width: 100%;
+            
+            /* REINFORCED RIGID SCROLL SNAP ARCHITECTURE */
+            overflow-y: scroll;
+            overflow-x: hidden;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            
+            /* Legacy support tags */
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Executive Fixed Header Placement */
+        header {
+            position: fixed;
+            top: 2.5rem;
+            left: 3rem;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Section Layout Presets */
+        section {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 12% 4rem 12%;
+            
+            /* Strict Locking Rules */
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        section.dark {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        section.light {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* Typography & Presentation Content */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.2rem;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 0.08em;
+            opacity: 0.8;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Index Directory Grid */
+        .index-container {
+            margin-top: 2rem;
+            max-width: 850px;
+        }
+
+        .index-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+        }
+
+        .index-list a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            padding: 1.2rem;
+            border: 1px solid var(--border-dark);
+            border-radius: 4px;
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .index-list a:hover {
+            background-color: rgba(248, 250, 252, 0.05);
+            border-color: var(--accent-gold);
+            padding-left: 1.7rem;
+        }
+
+        .index-num {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-gold);
+            margin-right: 1rem;
+            font-weight: 600;
+        }
+
+        .content-card {
+            max-width: 800px;
+        }
+
+        .highlight-box {
+            margin-top: 1.5rem;
+            padding: 1.75rem;
+            border-left: 2px solid var(--accent-gold);
+            background: rgba(10, 25, 47, 0.02);
+            font-size: 1.15rem;
+            line-height: 1.65;
+        }
+
+        .dark .highlight-box {
+            background: rgba(248, 250, 252, 0.03);
+        }
+
+
+        /* Infrastructure Synchronization Tags */
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .platform-tag {
+            padding: 1.2rem 0.5rem;
+            text-align: center;
+            background: rgba(10, 25, 47, 0.04);
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .dark .platform-tag {
+            background: rgba(248, 250, 252, 0.05);
+        }
+
+        /* Fully Interactive Clickable Pagination Dots */
+        .scroll-indicator {
+            position: fixed;
+            right: 3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            z-index: 100;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(10, 25, 47, 0.2);
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .dark-active .dot {
+            background-color: rgba(248, 250, 252, 0.2);
+        }
+
+        .dot:hover {
+            transform: scale(1.3);
+            background-color: var(--accent-gold);
+        }
+
+        .dot.active {
+            transform: scale(1.6);
+            background-color: var(--accent-gold) !important;
+            border: 1px solid var(--bg-light);
+        }
+        
+        .dark-active .dot.active {
+            border: 1px solid var(--bg-dark);
+        }
+
+
+        .url-link {
+            color: var(--accent-gold);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.4rem; }
+            h2 { font-size: 2.1rem; }
+            .index-list { grid-template-columns: 1fr; }
+            header { left: 1.5rem; top: 1.5rem; }
+            section { padding: 6rem 1.5rem 2rem 1.5rem; }
+            .platform-grid { grid-template-columns: repeat(2, 1fr); }
+            .scroll-indicator { right: 1rem; }
+        }
+
+        .highlight {
+            color: var(--accent-gold)
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Executive Fixed Header -->
+    <header>
+        <div class="brand-name" id="brandText">Ratnanjali TechX Private Limited</div>
+    </header>
+
+    <!-- Interactive Navigation Dots -->
+    <nav class="scroll-indicator" id="dotContainer">
+        <div class="dot active" onclick="navigateToSection(0)" title="Overview"></div>
+        <div class="dot" onclick="navigateToSection(1)" title="Website Development"></div>
+        <div class="dot" onclick="navigateToSection(2)" title="Search Engine Optimization"></div>
+        <div class="dot" onclick="navigateToSection(3)" title="Domain Allocation"></div>
+        <div class="dot" onclick="navigateToSection(4)" title="Cloud Infrastructure"></div>
+        <div class="dot" onclick="navigateToSection(5)" title="Data Layer Architecture"></div>
+        <div class="dot" onclick="navigateToSection(6)" title="Meta Synchronization"></div>
+        <div class="dot" onclick="navigateToSection(7)" title="Acquisition Strategy"></div>
+    </nav>
+
+
+    <!-- Section 1: Title Screen & Index Route -->
+    <section class="dark" id="hero">
+        <div class="content-card">
+            <p class="subtitle">Strategic Digital Presentation</p>
+            <h1>Presentation for<br>[Client Name]</h1>
+            
+            <div class="index-container">
+                <ul class="index-list">
+                    <li><a href="#website" onclick="handleIndexClick(event, 1)"><span class="index-num">1.</span> Website Development</a></li>
+                    <li><a href="#seo" onclick="handleIndexClick(event, 2)"><span class="index-num">2.</span> Search Engine Optimization</a></li>
+                    <li><a href="#domain" onclick="handleIndexClick(event, 3)"><span class="index-num">3.</span> Domain Procurement</a></li>
+                    <li><a href="#hosting" onclick="handleIndexClick(event, 4)"><span class="index-num">4.</span> Premium Hosting Server</a></li>
+                    <li><a href="#analytics" onclick="handleIndexClick(event, 5)"><span class="index-num">5.</span> Analytics Setup</a></li>
+                    <li><a href="#integration" onclick="handleIndexClick(event, 6)"><span class="index-num">6.</span> Connect Meta & Analytics</a></li>
+                    <li><a href="#ads" onclick="handleIndexClick(event, 7)"><span class="index-num">7.</span> Run Meta Ads (15%)</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Website -->
+    <section class="light" id="website">
+        <div class="content-card">
+            <span class="section-number">01</span>
+            <h2>Website Development</h2>
+            <p class="subtitle">Digital Identity & System Presentation</p>
+            <div class="highlight-box">
+                Design and deployment of a sleek, premium corporate ecosystem hosted at
+                <a href="https://yourclientdomain.com" target="_blank" class="url-link">yourclientdomain.com</a>. Configured for fast execution, luxury typography framework, and streamlined presentation layouts.
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: SEO -->
+    <section class="dark" id="seo">
+        <div class="content-card">
+            <span class="section-number">02</span>
+            <h2>Search Engine Optimization</h2>
+            <p class="subtitle">Organic Presence & Intent Mapping</p>
+            <div class="highlight-box">
+                Implementation of advanced <strong class="highlight">Technical SEO</strong> combined with the strategic creation of <strong class="highlight">50+ intent-driven pages</strong>. Specifically engineered to rank for targeted inquiries, bring in qualified business leads, and establish local search authority.
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Domain -->
+    <section class="light" id="domain">
+        <div class="content-card">
+            <span class="section-number">03</span>
+            <h2>Domain Name</h2>
+            <p class="subtitle">Digital Real Estate Allocation</p>
+            <div class="highlight-box">
+                Registration, custom DNS routing management, and continuous security domain locking for your corporate web address.
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Hosting -->
+    <section class="dark" id="hosting">
+        <div class="content-card">
+            <span class="section-number">04</span>
+            <h2>Hosting Server</h2>
+            <p class="subtitle">Enterprise Grade Cloud Infrastructure</p>
+            <div class="highlight-box">
+                Allocation of high-performance cloud hosting server instances. Maximized to guarantee stable sub-second load configurations, strict SSL protocol compliance, and absolute protection against downtime.
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Analytics Setup -->
+    <section class="light" id="analytics">
+        <div class="content-card">
+            <span class="section-number">05</span>
+            <h2>Analytics Setup</h2>
+            <p class="subtitle">Data Measurement Stack</p>
+            <div class="highlight-box">
+                Complete integration of structural site audit metrics. Enables clear operational insights into visitor funnels, interaction points, and click paths.
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Meta & Google Analytics Connection -->
+    <section class="dark" id="integration">
+        <div class="content-card">
+            <span class="section-number">06</span>
+            <h2>Unified Data Connection</h2>
+            <p class="subtitle">Meta Ecosystem Interconnectivity</p>
+            <div class="highlight-box">
+                Configuring clean tracking handshakes between data loops. We securely map conversion tracking and analytics across all channels:
+            </div>
+            <div class="platform-grid">
+                <div class="platform-tag">Instagram</div>
+                <div class="platform-tag">Facebook</div>
+                <div class="platform-tag">Meta Ads</div>
+                <div class="platform-tag">WhatsApp</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Meta Ads -->
+    <section class="light" id="ads">
+        <div class="content-card">
+            <span class="section-number">07</span>
+            <h2>Run Meta Ads</h2>
+            <p class="subtitle">Performance Marketing Engine</p>
+            <div class="highlight-box">
+                Executing highly targeted paid outreach strategies. Encompasses demographic profiling, split campaign optimizations, and managing creative ad scaling.
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Engine -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        const dots = document.querySelectorAll('.dot');
+        const brandText = document.getElementById('brandText');
+        const indicatorContainer = document.getElementById('dotContainer');
+
+        // 1. Clickable Pagination System (Targeting Document Body container now)
+        function navigateToSection(index) {
+            sections[index].scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleIndexClick(event, index) {
+            event.preventDefault();
+            navigateToSection(index);
+        }
+
+        // 2. Dynamic Section Intersection Observer Engine
+        const observerOptions = {
+            root: document.body, // Bound observer context to the scroll container explicitly
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentSection = entry.target;
+                    const sectionId = currentSection.getAttribute('id');
+                    const isDark = currentSection.classList.contains('dark');
+
+                    // Match and balance pagination dots color states
+                    sections.forEach((sec, idx) => {
+                        if (sec.getAttribute('id') === sectionId) {
+                            dots.forEach(d => d.classList.remove('active'));
+                            dots[idx].classList.add('active');
+                        }
+                    });
+
+                    // Premium Interface Adaptation (Adapts fixed overlay assets automatically)
+                    if (isDark) {
+                        brandText.style.color = 'var(--text-light)';
+                        indicatorContainer.classList.add('dark-active');
+                    } else {
+                        brandText.style.color = 'var(--text-dark)';
+                        indicatorContainer.classList.remove('dark-active');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
